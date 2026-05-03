@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Certificates from "@/components/Certificates";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Certificates />
       <Footer />
+      <SpeedInsights />
     </main>
   );
 }
