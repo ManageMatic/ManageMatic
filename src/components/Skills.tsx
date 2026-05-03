@@ -10,10 +10,10 @@ export default function Skills() {
   return (
     <section className="relative z-20 bg-[#0a0a0a] py-32 px-4 md:px-24">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 tracking-tight">
           Tools & Technologies
         </h2>
-        <p className="text-neutral-400 font-light mb-16 max-w-2xl mx-auto text-lg">
+        <p className="text-neutral-400 font-light mb-12 md:mb-16 max-w-2xl mx-auto text-base sm:text-lg">
           My technical arsenal for building scalable, user-centric web applications and robust backend systems.
         </p>
 

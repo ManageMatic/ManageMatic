@@ -25,12 +25,48 @@ export default function Certificates() {
         "Organized by Indian Society for Technical Education (ISTE), Gujarat Section",
       ],
     },
+    {
+      id: 3,
+      title: "AWS Cloud Practitioner Essentials",
+      issuer: "AWS Training and Certification",
+      date: "December 20th, 2024",
+      badges: ["AWS", "Training"],
+      tasks: [
+        "Core AWS cloud concepts and services",
+        "Cloud architecture and deployment models",
+        "AWS security, compliance, and pricing fundamentals",
+      ],
+    },
+    {
+      id: 4,
+      title: "Job Roles in the Cloud",
+      issuer: "AWS Training and Certification",
+      date: "December 20th, 2024",
+      badges: ["AWS", "Training"],
+      tasks: [
+        "Understanding cloud-based job roles and responsibilities",
+        "Career pathways in AWS cloud ecosystem",
+        "Skills mapping for cloud professionals",
+      ],
+    },
+    {
+      id: 5,
+      title: "Getting Started with Cloud Acquisition",
+      issuer: "AWS Training and Certification",
+      date: "December 20th, 2024",
+      badges: ["AWS", "Training"],
+      tasks: [
+        "Cloud procurement strategies and best practices",
+        "Evaluating cloud service providers",
+        "Cloud acquisition frameworks and governance",
+      ],
+    },
   ];
 
   return (
     <section className="relative z-20 bg-[#121212] py-32 px-4 md:px-24 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-16 tracking-tight text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-12 md:mb-16 tracking-tight text-center md:text-left">
           Licenses & Certifications
         </h2>
 

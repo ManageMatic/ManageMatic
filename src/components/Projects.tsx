@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <section className="relative z-20 bg-[#0a0a0a] py-32 px-4 md:px-24">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-16 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-12 md:mb-16 tracking-tight text-center md:text-left">
           Selected Works
         </h2>
 

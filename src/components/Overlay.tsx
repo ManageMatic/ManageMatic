@@ -22,10 +22,10 @@ export default function Overlay({ progress }: { progress: MotionValue<number> })
         style={{ opacity: opacity1, y: y1 }}
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
       >
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4 px-2">
           Ishan Mahida
         </h1>
-        <p className="text-xl md:text-2xl font-light text-neutral-300">
+        <p className="text-lg sm:text-xl md:text-2xl font-light text-neutral-300 px-2">
           Creative Developer.
         </p>
       </motion.div>
@@ -33,9 +33,9 @@ export default function Overlay({ progress }: { progress: MotionValue<number> })
       {/* Section 2 (30% scroll): Left Aligned */}
       <motion.div
         style={{ opacity: opacity2, y: y2 }}
-        className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-24"
+        className="absolute inset-0 flex flex-col items-start justify-center px-6 sm:px-8 md:px-24"
       >
-        <h2 className="text-4xl md:text-6xl font-semibold leading-tight max-w-2xl">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight max-w-2xl">
           Building projects
           <br /> that blend tech
           <br /> with creativity.
@@ -45,9 +45,9 @@ export default function Overlay({ progress }: { progress: MotionValue<number> })
       {/* Section 3 (60% scroll): Right Aligned */}
       <motion.div
         style={{ opacity: opacity3, y: y3 }}
-        className="absolute inset-0 flex flex-col items-end justify-center text-right px-8 md:px-24"
+        className="absolute inset-0 flex flex-col items-end justify-center text-right px-6 sm:px-8 md:px-24"
       >
-        <h2 className="text-4xl md:text-6xl font-semibold leading-tight max-w-2xl">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight max-w-2xl">
           Aspiring BE IT grad. <br />
           MERN Stack Developer.
         </h2>

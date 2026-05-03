@@ -32,7 +32,7 @@ export default function Experience() {
   return (
     <section className="relative z-20 bg-[#121212] py-32 px-4 md:px-24 border-t border-white/5">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-16 tracking-tight text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-12 md:mb-16 tracking-tight text-center md:text-left">
           Experience & Education
         </h2>
 

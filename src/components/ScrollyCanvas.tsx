@@ -90,9 +90,9 @@ export default function ScrollyCanvas() {
   };
 
   return (
-    <div ref={containerRef} className="relative bg-[#121212]" style={{ height: "1000vh" }}>
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
-        <canvas ref={canvasRef} className="w-full h-full block" />
+    <div ref={containerRef} className="relative bg-[#121212]" style={{ height: "1500vh" }}>
+      <div className="sticky top-0 h-[100dvh] w-full overflow-hidden">
+        <canvas ref={canvasRef} className="w-full h-[100dvh] block" />
         <Overlay progress={scrollYProgress} />
       </div>
     </div>
