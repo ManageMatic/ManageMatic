@@ -19,33 +19,31 @@ export default function ScrollyCanvas() {
     offset: ["start start", "end end"],
   });
 
-  // Map 0 -> 1 progress to 0 -> 119 frames
   const frameIndex = useTransform(scrollYProgress, [0, 1], [0, FRAME_COUNT - 1]);
 
   useEffect(() => {
-    // Preload images
-    const preloadImages = async () => {
+    const preloadImages = () => {
       for (let i = 0; i < FRAME_COUNT; i++) {
         const img = new Image();
         img.src = currentFrame(i);
         imagesRef.current[i] = img;
       }
     };
-
     preloadImages();
 
-    // Draw initial frame
     const canvas = canvasRef.current;
     const context = canvas?.getContext("2d");
-    if (canvas && context && imagesRef.current[0]) {
+    if (canvas && context) {
       const img = imagesRef.current[0];
-      img.onload = () => {
-        renderImage(img, canvas, context);
-      };
+      if (img) {
+        img.onload = () => renderImage(img, canvas, context);
+        if (img.complete) renderImage(img, canvas, context);
+      }
     }
 
     const handleResize = () => {
-      if (canvas && imagesRef.current[frameIndex.get()]) {
+      const canvas = canvasRef.current;
+      if (canvas && imagesRef.current[Math.round(frameIndex.get())]) {
         renderImage(
           imagesRef.current[Math.round(frameIndex.get())],
           canvas,
@@ -54,8 +52,12 @@ export default function ScrollyCanvas() {
       }
     };
 
+    window.visualViewport?.addEventListener("resize", handleResize);
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.visualViewport?.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", handleResize);
+    };
   }, [frameIndex]);
 
   useMotionValueEvent(frameIndex, "change", (latest) => {
@@ -73,15 +75,13 @@ export default function ScrollyCanvas() {
     canvas: HTMLCanvasElement,
     context: CanvasRenderingContext2D
   ) => {
-    // Make sure canvas matches window size
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const w = window.visualViewport?.width ?? window.innerWidth;
+    const h = window.visualViewport?.height ?? window.innerHeight;
 
-    // object-fit: cover logic
-    const scale = Math.max(
-      canvas.width / img.width,
-      canvas.height / img.height
-    );
+    canvas.width = w;
+    canvas.height = h;
+
+    const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
     const x = canvas.width / 2 - (img.width / 2) * scale;
     const y = canvas.height / 2 - (img.height / 2) * scale;
 
@@ -90,9 +90,9 @@ export default function ScrollyCanvas() {
   };
 
   return (
-    <div ref={containerRef} className="relative bg-[#121212]" style={{ height: "1500vh" }}>
+    <div ref={containerRef} className="relative bg-[#121212]" style={{ height: "1500dvh" }}>
       <div className="sticky top-0 h-[100dvh] w-full overflow-hidden">
-        <canvas ref={canvasRef} className="w-full h-[100dvh] block" />
+        <canvas ref={canvasRef} className="w-full h-full block" />
         <Overlay progress={scrollYProgress} />
       </div>
     </div>
