@@ -3,20 +3,18 @@
 import { motion, MotionValue, useTransform } from "framer-motion";
 
 export default function Overlay({ progress }: { progress: MotionValue<number> }) {
-  const opacity1 = useTransform(progress, [0, 0.15], [1, 0]);
-  const y1 = useTransform(progress, [0, 0.15], [0, -30]);
+  // Section 1: visible at start, fades out by 40%
+  const opacity1 = useTransform(progress, [0, 0.40], [1, 0]);
+  const y1 = useTransform(progress, [0, 0.40], [0, -40]);
 
-  const opacity2 = useTransform(progress, [0.2, 0.3, 0.55], [0, 1, 0]);
-  const y2 = useTransform(progress, [0.2, 0.3, 0.55], [40, 0, -40]);
-
-  // No fade-out, no upward y movement on exit
-  const opacity3 = useTransform(progress, [0.6, 0.72], [0, 1]);
-  const y3 = useTransform(progress, [0.6, 0.72], [40, 0]);
+  // Section 2: fades in at 50%, fully visible at 65%, stays till end
+  const opacity2 = useTransform(progress, [0.50, 0.65], [0, 1]);
+  const y2 = useTransform(progress, [0.50, 0.65], [40, 0]);
 
   return (
     <div className="absolute inset-0 pointer-events-none z-10 text-white">
 
-      {/* Section 1 — center */}
+      {/* Section 1 — Name, center */}
       <motion.div
         style={{ opacity: opacity1, y: y1 }}
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
@@ -29,27 +27,15 @@ export default function Overlay({ progress }: { progress: MotionValue<number> })
         </p>
       </motion.div>
 
-      {/* Section 2 — left, bottom-half so it clears section 1 visually */}
+      {/* Section 2 — Tagline, right aligned */}
       <motion.div
         style={{ opacity: opacity2, y: y2 }}
-        className="absolute inset-0 flex flex-col items-start justify-center px-6 sm:px-8 md:px-24"
+        className="absolute inset-0 flex flex-col items-center justify-end text-center px-6 sm:px-8 md:px-24"
       >
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">
-          Building projects
-          <br />that blend tech
-          <br />with creativity.
-        </h2>
-      </motion.div>
-
-      {/* Section 3 — fixed to bottom-right, NO y transform that pushes off-screen */}
-      <motion.div
-        style={{ opacity: opacity3, y: y3 }}
-        className="absolute bottom-16 right-0 left-0 flex flex-col items-end text-right px-6 sm:px-8 md:px-24"
-      >
-        <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">
-          Aspiring BE IT grad.
+          Full-Stack Developer.
           <br />
-          MERN Stack Developer.
+          Crafting digital experiences.
         </h2>
       </motion.div>
     </div>
