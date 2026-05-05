@@ -1,9 +1,9 @@
 export default function Skills() {
   const skills = [
-    "React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "TypeScript", "JavaScript", 
-    "HTML5 / CSS3", "Tailwind CSS", "Framer Motion", "Bootstrap", 
-    "PHP", "MySQL", "REST APIs", "Git & GitHub", "Vercel",
-    "Full-Stack Development", "Database Management (DBMS)", 
+    "React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "TypeScript", "JavaScript",
+    "HTML5 / CSS3", "Tailwind CSS", "Framer Motion", "Bootstrap", "Vibe Coding",
+    "PHP", "MySQL", "REST APIs", "bcrypt", "Git & GitHub", "Vercel", "JWT Authentication",
+    "Full-Stack Development", "Database Management (DBMS)",
     "QR Code Integration", "Project Management"
   ];
 

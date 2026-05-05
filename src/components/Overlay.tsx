@@ -30,7 +30,7 @@ export default function Overlay({ progress }: { progress: MotionValue<number> })
       {/* Section 2 — Tagline, right aligned */}
       <motion.div
         style={{ opacity: opacity2, y: y2 }}
-        className="absolute inset-0 flex flex-col items-center justify-end text-center px-6 sm:px-8 md:px-24"
+        className="absolute inset-x-0 bottom-16 flex flex-col items-center text-center px-6"
       >
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">
           Full-Stack Developer.
