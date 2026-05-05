@@ -11,7 +11,7 @@
 <!-- Badges -->
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ishan%20Mahida-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ishan-mahida)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Site-121212?style=for-the-badge&logo=vercel&logoColor=white)](https://ishan-mahida.vercel.app)
-[![Email](https://img.shields.io/badge/Email-ishanmahida12@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ishanmahida123@gmail.com)
+[![Email](https://img.shields.io/badge/Email-ishanmahida123@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ishanmahida123@gmail.com)
 [![Open to Work](https://img.shields.io/badge/Open%20To-Part--Time%20Remote-22c55e?style=for-the-badge&logo=briefcase&logoColor=white)]()
 
 </div>
@@ -162,7 +162,7 @@ A lightning-fast, device-responsive note app with zero loading friction.
 
 *Open to part-time remote work, freelance projects, and contract opportunities.*
 
-[![Email Me](https://img.shields.io/badge/📬%20Email%20Me-ishanmahida12@gmail.com-A78BFA?style=for-the-badge)](mailto:ishanmahida123@gmail.com)
+[![Email Me](https://img.shields.io/badge/📬%20Email%20Me-ishanmahida123@gmail.com-A78BFA?style=for-the-badge)](mailto:ishanmahida123@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/Connect%20on-LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/ishan-mahida)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer" width="100%"/>
