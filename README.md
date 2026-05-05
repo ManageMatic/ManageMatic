@@ -142,7 +142,7 @@ A lightning-fast, device-responsive note app with zero loading friction.
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=ishanmahida&theme=tokyonight&hide_border=true" height="165"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=ManageMatic&theme=tokyonight&hide_border=true" height="165"/>
 
 </div>
 
