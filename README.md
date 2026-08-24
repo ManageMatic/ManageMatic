@@ -27,7 +27,7 @@ const ishan = {
   education: "B.E. Information Technology @ GTU (2024–2027)",
   role: "Full-Stack MERN Developer",
   available: "Part-time · Remote · Freelance",
-  contact: "ishanmahida12@gmail.com",
+  contact: "ishanmahida123@gmail.com",
 
   skills: {
     frontend:  ["React.js", "JavaScript", "CSS", "Bootstrap"],
